@@ -1,6 +1,7 @@
 import React from "react"
 import Header from "./Header"
 import Course from "./Course"
+import Total from "./Total"
 const App = () => {
   const course = {
     id: 1,
@@ -23,10 +24,14 @@ const App = () => {
       }
     ]
   }
+  const newValue = {name:"Redux",exercises:11,id:4}
+    course.parts.push(newValue)
+
 
   return(  <>  
   <Header header = {course.name} />
    <Course course={course.parts} /> 
+   <Total total= {course.parts} />
   </>
 )
 
